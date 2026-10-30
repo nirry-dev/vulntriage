@@ -1,0 +1,7 @@
+# A few deliberately old, known-vulnerable pins to see vulntriage light up.
+# (Do not use these versions for real — that's the point.)
+django==2.2.0
+pyyaml==5.3.1
+requests==2.19.1
+jinja2==2.10
+urllib3==1.24.1

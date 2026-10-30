@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vulntriage"
+version = "0.1.0"
+description = "Triage dependency CVEs by real-world exploitability — correlate OSV findings with CISA KEV and FIRST EPSS, then rank by what to fix first."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Nirry" }]
+keywords = ["security", "cve", "vulnerability", "osv", "kev", "epss", "sca", "dependencies"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+
+[project.scripts]
+vulntriage = "vulntriage.cli:main"
+
+[project.urls]
+Homepage = "https://nirry.net"
+Source = "https://github.com/nirry-dev/vulntriage"
+
+[tool.hatch.build.targets.wheel]
+packages = ["vulntriage"]
